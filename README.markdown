@@ -9,6 +9,7 @@ Usage
 The best practice is to call .textSaver() on a form. This way, all input text fields and textareas will be saved, and localStorage will clear when the form is submitted.
 
 The form:
+
 ```html
 <form id="the_form">
   <input type="text" id="name" name="name" />
@@ -18,6 +19,7 @@ The form:
 ```
 
 The jQuery:
+
 ```javascript
 $(document).ready(function() {
   $("#the_form").textSaver();
