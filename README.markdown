@@ -9,15 +9,19 @@ Usage
 The best practice is to call .textSaver() on a form. This way, all input text fields and textareas will be saved, and localStorage will clear when the form is submitted.
 
 The form:
-	<form id="the_form">
-	  <input type="text" id="name" name="name" />
-	  <textarea id="big_textarea" name="big_textarea" rows="23" cols="42"></textarea>
-	  <input type="submit" value="Submit" />
-	</form>
+```html
+<form id="the_form">
+  <input type="text" id="name" name="name" />
+  <textarea id="big_textarea" name="big_textarea" rows="23" cols="42"></textarea>
+  <input type="submit" value="Submit" />
+</form>
+```
 
 The jQuery:
-	$(document).ready(function() {
-	  $("#the_form").textSaver();
-	});
+```javascript
+$(document).ready(function() {
+  $("#the_form").textSaver();
+});
+```
 
 Nevertheless, .textSaver() can still be called on individual textareas or input text fields if you only want certain fields to be savable.
