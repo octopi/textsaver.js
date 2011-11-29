@@ -1,0 +1,16 @@
+<h2>Description</h2>
+		<p><code>textSaver</code> is a <a href="http://plugins.jquery.com/project/textSaver">jQuery plugin</a> that uses HTML5 <code>localStorage</code> (aka <a href="http://dev.w3.org/html5/webstorage/">"Web Storage"</a>) to store what your users enter into input text fields or textareas. That's it! No messy cookies, session IDs, or database calls needed&mdash;this means that your users' draft versions of forms will be as secure as their computers, since nothing but the final submission is sent to a server. This saves space on your own servers and reduces the chances for XSS attacks.</p>
+		<h2>Usage</h2>
+		<p>The best practice is to call <code>.textSaver()</code> on a form. This way, <strong>all input text fields and textareas</strong> will be saved, and <code>localStorage</code> will clear when the form is submitted.</p>
+		<label>The form:</label>
+		<pre><code>&lt;form id="the_form"&gt;
+  &lt;input type="text" id="name" name="name" /&gt;
+  &lt;textarea id="big_textarea" name="big_textarea" rows="23" cols="42"&gt;&lt;/textarea&gt;
+  &lt;input type="submit" value="Submit" /&gt;
+&lt;/form&gt;</code></pre>
+<br />
+		<label>The jQuery:</label>
+<pre><code>$(document).ready(function() {
+  $("#the_form").textSaver();
+});</code></pre>
+		<p>Nevertheless, <code>.textSaver()</code> can still be called on individual textareas or input text fields if you only want certain fields to be savable.</p>
